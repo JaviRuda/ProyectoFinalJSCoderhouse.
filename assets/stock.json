@@ -1,0 +1,8 @@
+[
+    {"id": 1, "nombre": "Dia de Equi", "precio": 250 , "img": "./img/mountain.jpg"},
+    {"id": 2, "nombre": "Descenso Mountain Bike", "precio": 100, "img": "./img/Bike.jpg"},
+    {"id": 3, "nombre": "Escalada", "precio": 80, "img": "./img/Escalada.jpg"},
+    {"id": 4, "nombre": "Kite Surf", "precio": 200, "img": "./img/kite.jpg"},
+    {"id": 5, "nombre": "Trekking", "precio": 25, "img": "./img/Trekk.jpg"},
+    {"id": 6, "nombre": "Parapente", "precio": 400, "img": "./img/parapente.jpg"}
+]
