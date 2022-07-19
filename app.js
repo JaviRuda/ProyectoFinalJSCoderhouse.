@@ -50,7 +50,7 @@ function agregarCarrito(id) {
         duration: 2000,
         className: "btnToastify",
         style: {
-          background: "linear-gradient(to right, #056bba, #02a3df)",
+        background: "linear-gradient(to right, #056bba, #02a3df)",
         }
     }).showToast();
     
@@ -164,3 +164,49 @@ if (carritoEnLs) {
 } else {
     carrito = []
 }
+
+// Funciones ternarias.
+
+function guardarUsuario() {
+    let nombre = document.getElementById("nombre");
+    let email = document.getElementById("email");
+    let edad = document.getElementById("edad");
+    
+    const usuario = {
+        nombre:nombre.value,
+        email:email.value,
+        edad:edad.value
+    }
+
+    usuario.edad == "SI" ? registrarUsuario() : informarError();
+
+    function registrarUsuario() {
+        const usuario_edad = {
+            ...usuario,
+            numero_aventura: Math.round(Math.random() * 10000)
+        }
+
+        informarRegistracion(usuario_edad);
+    }
+
+    function informarRegistracion(usuario) {
+        let salida = `Nombre: ${usuario.nombre}<br>
+        Email: ${usuario.email}<br>
+        Mayor de edad: ${usuario.edad}<br>
+        Codigo unico: #${usuario.numero_aventura}`;
+        document.getElementById("resultado").innerHTML = `<p class="alert alert-success" role="alert">${salida}  Usa este numero para obtener 20% de descuento</p>`;
+        limpiarCampos();
+    }
+
+    function informarError() {
+        document.getElementById("resultado").innerHTML = `<p class="alert alert-danger" role="alert">No es posible reservarle a menores. Lo siento.</p>`;
+    }
+
+    function limpiarCampos() {
+        document.getElementById("nombre").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("edad").value = "";
+    }
+}
+
+document.getElementById("enviarForm").addEventListener("click", guardarUsuario);

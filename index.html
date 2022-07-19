@@ -34,9 +34,35 @@
         </header>
         
         
-        <h2>Hola! Nos alegra mucho tu visita.</h2>
+        <h2>Hola! Nos alegra mucho tu visita ayudanos a conocerte mas.</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edad" class="form-label">¿Sos Mayor?</label>
+                            <select class="form-control" id="edad">
+                                <option value="SI">Sí</option>
+                                <option value="NO">No</option>
+                            </select>
+                        </div>
+                        <button type="button" id="enviarForm" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-warning">Limpiar</button>
+                    </form>
+                </div>
+                <div id="resultado" class="col-md-6"></div>
+            </div>
+        </div>
         
-        <p id="info">Aqui encontrarás todo lo necesario para armar tu dia en Bariloche!/p>
+        <p id="info">Aqui encontrarás todo lo necesario para armar tu dia en Bariloche! </p>
         
         <div id="form">
             <div id="f-texto">
